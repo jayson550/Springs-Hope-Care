@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springs Hope Care - Healthcare Services</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #2a4d8f;
+        }
+
+        .nav {
+            float: right;
+        }
+
+        .nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            color: #2a4d8f;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(42, 77, 143, 0.7), rgba(42, 77, 143, 0.7)),
+                        url('https://images.unsplash.com/photo-1584515933487-779824d29309') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            background: #ffb703;
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background: #ffca3a;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .service-card h3 {
+            color: #2a4d8f;
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about {
+            background: #eef2f7;
+            padding: 60px 0;
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .contact-box p {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2a4d8f;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Springs Hope Care</div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to Springs Hope Care</h1>
+            <p>Compassionate Healthcare Services for Your Well-being</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="subtitle">Comprehensive care solutions tailored to your needs</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Primary Care</h3>
+                    <p>Access to experienced healthcare professionals for routine check-ups and preventive care.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Specialist Care</h3>
+                    <p>Specialized medical expertise from certified specialists across various medical fields.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Emergency Services</h3>
+                    <p>24/7 emergency care and urgent treatment for critical health situations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Wellness Programs</h3>
+                    <p>Holistic wellness and preventive health programs to promote overall well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Springs Hope Care</h2>
+                <p>Springs Hope Care is dedicated to providing exceptional healthcare services with compassion and professionalism. Our team of experienced healthcare providers is committed to ensuring every patient receives personalized, quality care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Contact Us</h2>
+            <div class="contact-box">
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Email:</strong> info@springshopcare.com</p>
+                <p><strong>Address:</strong> 123 Healthcare Ave, Springs City, ST 12345</p>
+                <p><strong>Hours:</strong> Mon-Fri 8:00 AM - 6:00 PM, Sat 9:00 AM - 2:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Springs Hope Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
