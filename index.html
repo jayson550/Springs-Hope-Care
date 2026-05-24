@@ -3,104 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Springs Hope Care - Healthcare Services</title>
+    <title>Springs Hope Care - Compassionate In-Home Care Services</title>
     <style>
-        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Segoe UI", Arial, sans-serif;
         }
 
         body {
-            background: #f7f9fc;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
         }
 
-        /* Container */
         .container {
             width: 90%;
-            max-width: 1100px;
-            margin: auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* Header */
-        .header {
-            background: #ffffff;
-            padding: 20px 0;
-            border-bottom: 1px solid #e5e5e5;
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
         }
 
-        .header-content {
+        .navbar .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 20px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-
-        .logo-text {
-            font-size: 1.6rem;
+        .nav-brand {
+            font-size: 1.5rem;
             font-weight: bold;
             color: #2a4d8f;
         }
 
-        .nav {
+        .nav-menu {
             display: flex;
-            gap: 20px;
+            list-style: none;
+            gap: 2rem;
         }
 
-        .nav a {
-            text-decoration: none;
+        .nav-menu a {
             color: #333;
+            text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s;
         }
 
-        .nav a:hover {
-            color: #2a4d8f;
+        .nav-menu a:hover {
+            color: #ffb703;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(42, 77, 143, 0.7), rgba(42, 77, 143, 0.7)),
-                        url('https://images.unsplash.com/photo-1584515933487-779824d29309') center/cover no-repeat;
+            background: linear-gradient(rgba(42, 77, 143, 0.7), rgba(42, 77, 143, 0.7)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200') center/cover;
             color: white;
             padding: 120px 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
         }
 
         .cta-button {
             background: #ffb703;
             color: #000;
-            padding: 12px 25px;
+            padding: 12px 30px;
+            border: none;
             border-radius: 5px;
-            text-decoration: none;
+            font-size: 1rem;
             font-weight: bold;
-            display: inline-block;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
         .cta-button:hover {
@@ -109,163 +99,404 @@
 
         /* Services Section */
         .services {
-            padding: 60px 0;
-            text-align: center;
+            padding: 80px 0;
+            background: #f9f9f9;
         }
 
         .services h2 {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
             margin-bottom: 10px;
+            color: #2a4d8f;
         }
 
-        .subtitle {
+        .section-subtitle {
+            text-align: center;
             color: #666;
-            margin-bottom: 40px;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
         }
 
-        .service-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .service-card {
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
         .service-card h3 {
             color: #2a4d8f;
             margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.8;
         }
 
         /* About Section */
         .about {
-            background: #eef2f7;
-            padding: 60px 0;
-        }
-
-        .about-content {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
+            padding: 80px 0;
+            background: white;
         }
 
         .about h2 {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2a4d8f;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
             margin-bottom: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .benefits-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffb703;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            background: #f0f0f0;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .about-image h3 {
+            color: #2a4d8f;
+            margin-bottom: 15px;
+        }
+
+        .about-image p {
+            color: #666;
+            line-height: 1.8;
         }
 
         /* Contact Section */
         .contact {
-            padding: 60px 0;
-            text-align: center;
+            padding: 80px 0;
+            background: #f9f9f9;
         }
 
         .contact h2 {
             text-align: center;
-            margin-bottom: 30px;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2a4d8f;
         }
 
-        .contact-box {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            max-width: 400px;
-            margin: auto;
-            text-align: left;
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
         }
 
-        .contact-box p {
-            margin-bottom: 10px;
+        .contact-info h3 {
+            color: #2a4d8f;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2a4d8f;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: #2a4d8f;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #1e3a5f;
         }
 
         /* Footer */
         .footer {
             background: #2a4d8f;
             color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
             text-align: center;
-            padding: 15px 0;
-            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffb703;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            color: #ddd;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="logo.svg" alt="Springs Hope Care Logo">
-                </div>
-                <nav class="nav">
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
+            <div class="nav-brand">Springs Hope Care</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="home" class="hero">
         <div class="container">
-            <h1>Welcome to Springs Hope Care</h1>
-            <p>Compassionate In-Home Care Services for Your Well-being</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <h1>Compassionate In-Home Care for Seniors</h1>
+            <p>Help your loved ones stay safe, comfortable, and independent at home with professional care</p>
+            <button class="cta-button">Get Started Today</button>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <p class="subtitle">Comprehensive care solutions tailored to your needs</p>
-            <div class="service-grid">
+            <h2>Our Premium Services</h2>
+            <p class="section-subtitle">We provide comprehensive care tailored to meet your unique needs</p>
+            <div class="services-grid">
                 <div class="service-card">
-                    <h3>Primary Care</h3>
-                    <p>Access to experienced healthcare professionals for routine check-ups and preventive care.</p>
+                    <div class="service-icon">🛁</div>
+                    <h3>Personal Care</h3>
+                    <p>Professional assistance with daily living activities including bathing, dressing, grooming, and hygiene to maintain dignity and independence.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Specialist Care</h3>
-                    <p>Specialized medical expertise from certified specialists across various medical fields.</p>
+                    <div class="service-icon">🤝</div>
+                    <h3>Companion Care</h3>
+                    <p>Meaningful companionship and emotional support to reduce isolation, encourage social engagement, and promote mental wellbeing.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Emergency Services</h3>
-                    <p>24/7 emergency care and urgent treatment for critical health situations.</p>
+                    <div class="service-icon">🍽️</div>
+                    <h3>Meal Preparation</h3>
+                    <p>Nutritious meal planning and preparation tailored to dietary restrictions and preferences, ensuring proper nutrition and hydration.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Wellness Programs</h3>
-                    <p>Holistic wellness and preventive health programs to promote overall well-being.</p>
+                    <div class="service-icon">💊</div>
+                    <h3>Medication Management</h3>
+                    <p>Reliable reminders and assistance with medication schedules to ensure compliance and safe administration of prescriptions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚶</div>
+                    <h3>Mobility Assistance</h3>
+                    <p>Professional support with walking, transfers, and physical mobility to prevent falls and maintain independence and safety.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Household Support</h3>
+                    <p>Light housekeeping, laundry, and organization services to maintain a clean, safe, and comfortable living environment.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section id="about" class="about">
         <div class="container">
+            <h2>Why Springs Hope Care?</h2>
             <div class="about-content">
-                <h2>About Springs Hope Care</h2>
-                <p>Springs Hope Care is dedicated to providing exceptional compassionate in-home care services with professionalism. Our team of experienced healthcare providers is committed to ensuring every patient receives personalized, quality care in the comfort of their own home.</p>
+                <div class="about-text">
+                    <p>We believe that seniors deserve the highest quality of life, and aging in place is often the best option for independence, comfort, and happiness. Our mission is to provide compassionate, professional in-home care that allows your loved ones to maintain their dignity and independence.</p>
+                    <p>Our team of carefully screened, trained, and compassionate professionals is dedicated to exceeding expectations every single day.</p>
+                    <ul class="benefits-list">
+                        <li>Carefully screened and background-checked caregivers</li>
+                        <li>Flexible scheduling to fit your family's needs</li>
+                        <li>Personalized care plans tailored to individual needs</li>
+                        <li>Reliable, punctual, and professional service</li>
+                        <li>Affordable pricing options and payment plans</li>
+                        <li>24/7 customer support and emergency assistance</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <h3>Our Commitment</h3>
+                    <p>Dedicated to providing exceptional, compassionate care to seniors and their families.</p>
+                    <hr style="margin: 2rem 0; opacity: 0.3;">
+                    <h3>Your Trust</h3>
+                    <p>We earn your trust through quality service and personal dedication.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-box">
-                <p><strong>Phone:</strong> (555) 123-4567</p>
-                <p><strong>Email:</strong> info@springshopcare.com</p>
-                <p><strong>Address:</strong> 123 Healthcare Ave, Springs City, ST 12345</p>
-                <p><strong>Hours:</strong> Mon-Fri 8:00 AM - 6:00 PM, Sat 9:00 AM - 2:00 PM</p>
+            <h2>Get In Touch With Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>
+                        <strong>📞 Phone</strong><br>
+                        (206) 475-5439
+                    </p>
+                    <p>
+                        <strong>📱 Cell</strong><br>
+                        (206) 475-5439
+                    </p>
+                    <p>
+                        <strong>📠 Fax</strong><br>
+                        (952) 600-5664
+                    </p>
+                    <p>
+                        <strong>📧 Email</strong><br>
+                        ashukri@springshopecare.com
+                    </p>
+                    <p>
+                        <strong>📍 Address</strong><br>
+                        8645 Fremont Ave S<br>
+                        Bloomington, MN 55420
+                    </p>
+                    <p>
+                        <strong>⏰ Hours</strong><br>
+                        24/7 Available for Emergencies
+                    </p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -273,8 +504,38 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Springs Hope Care. All rights reserved.</p>
+            <div class="footer-content">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Springs Hope Care</p>
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Springs Hope Care. All rights reserved. | Compassionate care for the ones you love.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
